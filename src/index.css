@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .badge {
+    @apply inline-flex items-center justify-center px-2 py-1 text-xs font-medium rounded;
+  }
+
+  .badge-new {
+    @apply badge bg-badge-new text-white;
+  }
+
+  .badge-hot {
+    @apply badge bg-badge-hot text-white;
+  }
+
+  .badge-best {
+    @apply badge bg-badge-best text-white;
+  }
+
+  .filter-checkbox {
+    @apply h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary;
+  }
+
+  .filter-label {
+    @apply ml-2 text-sm text-gray-600;
+  }
+
+  .btn-cart {
+    @apply bg-primary text-white p-2 rounded flex items-center justify-center;
+  }
+
+  .btn-wishlist {
+    @apply text-gray-400 hover:text-red-500 transition-colors;
+  }
+
+  .filter-section {
+    @apply py-4 border-gray-200;
+  }
+
+  .filter-title {
+    @apply font-medium text-sm mb-2 flex items-center justify-between cursor-pointer;
+  }
+
+  .filter-list {
+    @apply space-y-2;
+  }
+
+  .product-card {
+    @apply bg-white rounded-lg shadow-sm overflow-hidden relative;
+  }
+
+  .product-image {
+    @apply w-full aspect-square object-cover;
+  }
+
+  .product-title {
+    @apply text-sm font-medium mt-2;
+  }
+
+  .product-price {
+    @apply text-base font-semibold;
+  }
+
+  .product-price-old {
+    @apply text-sm line-through text-gray-400;
+  }
+}
