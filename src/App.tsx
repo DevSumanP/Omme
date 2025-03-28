@@ -7,8 +7,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<SweatshirtPage />} />
-        <Route path="/category/sweatshirt" element={<SweatshirtPage />} />
-        <Route path="/product/brooklyn-nyc-sweatshirt" element={<ProductDetailPage />} />
+        <Route path="/category/:category" element={<SweatshirtPage />} />
+        <Route path="/product/:productSlug" element={<ProductDetailPage />} />
       </Routes>
     </BrowserRouter>
   );

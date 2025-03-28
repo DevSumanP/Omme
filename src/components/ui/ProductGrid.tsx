@@ -3,13 +3,16 @@ import ProductCard from './ProductCard';
 
 export interface Product {
   id: string;
-  title: string;
+  name: string;        // Changed from title
   image: string;
   price: number;
-  oldPrice?: number;
-  badge?: 'new' | 'hot' | 'best';
-  isWishlisted?: boolean;
-  slug?: string;  // Add slug property to the interface
+  category: string;
+  color: string[];     // Array of strings
+  size: string[];      // Array of strings
+  type: string[];      // Array of strings
+  isNew?: boolean;     // Changed from badge
+  tags?: string[];
+  createdAt?: string;
 }
 
 interface ProductGridProps {
@@ -36,13 +39,10 @@ const ProductGrid: FC<ProductGridProps> = ({ products, view }) => {
         <ProductCard
           key={product.id}
           id={product.id}
-          title={product.title}
+          title={product.name}  // Changed from title to name
           image={product.image}
           price={product.price}
-          oldPrice={product.oldPrice}
-          badge={product.badge}
-          isWishlisted={product.isWishlisted}
-          slug={product.slug}
+          badge={product.isNew ? 'new' : undefined}
         />
       ))}
     </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,7 @@
 @layer base {
   body {
     @apply font-sans bg-white text-gray-900 antialiased;
+    font-family: 'Poppins', sans-serif; 
   }
 }
 
@@ -16,19 +17,19 @@
   }
 
   .badge-new {
-    @apply badge bg-badge-new text-white;
+    @apply badge bg-blue-400 text-white text-[10px];
   }
 
   .badge-hot {
-    @apply badge bg-badge-hot text-white;
+    @apply badge bg-badge-hot text-white text-[10px];
   }
 
   .badge-best {
-    @apply badge bg-badge-best text-white;
+    @apply badge bg-badge-best text-white text-[10px];
   }
 
   .filter-checkbox {
-    @apply h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary;
+    @apply h-3 w-3 rounded border-gray-300 text-primary focus:ring-primary;
   }
 
   .filter-label {
