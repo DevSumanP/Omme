@@ -15,6 +15,8 @@ const SweatshirtPage: FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [error, setError] = useState<string | null>(null);
 
+  console.log("Current category:", category);
+
   const breadcrumbItems = [
     { label: "Category", href: "/category" },
     { label: category || "All Products", href: `/category/${category || ""}`, current: true },

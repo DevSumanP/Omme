@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -10,40 +10,6 @@
       {
         "source": "**",
         "destination": "/index.html"
-      }
-    ]
-  },
-  "firestore": {
-    "indexes": [
-      {
-        "collectionGroup": "products",
-        "queryScope": "COLLECTION",
-        "fields": [
-          { "fieldPath": "category", "order": "ASCENDING" },
-          { "fieldPath": "type", "arrayConfig": "CONTAINS" },
-          { "fieldPath": "price", "order": "ASCENDING" },
-          { "fieldPath": "createdAt", "order": "DESCENDING" }
-        ]
-      },
-      {
-        "collectionGroup": "products",
-        "queryScope": "COLLECTION",
-        "fields": [
-          { "fieldPath": "category", "order": "ASCENDING" },
-          { "fieldPath": "color", "arrayConfig": "CONTAINS" },
-          { "fieldPath": "price", "order": "ASCENDING" },
-          { "fieldPath": "createdAt", "order": "DESCENDING" }
-        ]
-      },
-      {
-        "collectionGroup": "products",
-        "queryScope": "COLLECTION",
-        "fields": [
-          { "fieldPath": "category", "order": "ASCENDING" },
-          { "fieldPath": "size", "arrayConfig": "CONTAINS" },
-          { "fieldPath": "price", "order": "ASCENDING" },
-          { "fieldPath": "createdAt", "order": "DESCENDING" }
-        ]
       }
     ]
   }
